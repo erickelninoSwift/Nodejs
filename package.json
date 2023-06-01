@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erickelninoSwift/Nodejs.git"
+  },
+  "keywords": [
+    "NodeJs"
+  ],
+  "author": "Eriik_Elnino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erickelninoSwift/Nodejs/issues"
+  },
+  "homepage": "https://github.com/erickelninoSwift/Nodejs#readme"
+}
