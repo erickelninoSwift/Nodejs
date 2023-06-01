@@ -36,6 +36,16 @@ const fileSystem = require('fs');
 
 // })
 
-fileSystem.readFile('./erickelnino.txt','utf-8', (error,data) =>{
-    error ? console.log(`Error found while reading the file : ${error}`) : console.log(`Data : ${data}`);
+// fileSystem.readFile('./erickelnino.txt','utf-8', (error,data) =>{
+//     error ? console.log(`Error found while reading the file : ${error}`) : console.log(`Data : ${data}`);
+// });
+
+// fileSystem.rename('./erickelnino.txt','./jackpot.txt', (error) =>{
+
+//     console.log(`${error ? `Error found while renaming the file : ${error}` : `File was renamed succesfully`}`);
+
+// });
+
+fileSystem.unlink('./jackpot.txt', (error) =>{
+    error ? console.log(`Error while deleting file ${error}`) : console.log('file was deleted with success');
 });
