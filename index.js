@@ -30,8 +30,12 @@
 const fileSystem = require('fs');
 
 
-fileSystem.writeFile('./erickelnino.txt','Hi how are you doing today',(error) =>{
+// fileSystem.writeFile('./erickelnino.txt','Hi how are you doing today',(error) =>{
 
-    error ? console.log(`File could not be created : ${error}`) : console.log("File was created successfully");
+//     error ? console.log(`File could not be created : ${error}`) : console.log("File was created successfully"); 
 
-})
+// })
+
+fileSystem.readFile('./erickelnino.txt','utf-8', (error,data) =>{
+    error ? console.log(`Error found while reading the file : ${error}`) : console.log(`Data : ${data}`);
+});
