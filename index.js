@@ -1,11 +1,7 @@
+const mydiv = require("../Calculator/div");
+const multiplication = require("../Calculator/multiply");
+const Addition = require("../Calculator/add");
+const substraction = require("../Calculator/sub");
 
-// const {add,sub} = require("./add");
-const jackpot = require("./add");
 
-
-jackpot.sub();
-jackpot.add();
-console.log(`Number is : ${jackpot.addNumbers(15,15)}`);
-
-console.log(__dirname);
-console.log(__filename);
+console.log(mydiv(10,2));
