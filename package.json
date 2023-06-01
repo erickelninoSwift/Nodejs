@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/erickelninoSwift/Nodejs/issues"
   },
-  "homepage": "https://github.com/erickelninoSwift/Nodejs#readme"
+  "homepage": "https://github.com/erickelninoSwift/Nodejs#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
