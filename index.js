@@ -3,6 +3,8 @@
 // const add = require("./Calculator/add");
 // const sub = require("./Calculator/sub");
 
+const { copyFileSync } = require("fs");
+
 
 
 // let num1 = parseInt(process.argv[2]);
@@ -27,7 +29,7 @@
 //     console.log(multiply(num1,num2));
 // }
 
-const fileSystem = require('fs');
+// const fileSystem = require('fs');
 
 
 // fileSystem.writeFile('./erickelnino.txt','Hi how are you doing today',(error) =>{
@@ -46,6 +48,23 @@ const fileSystem = require('fs');
 
 // });
 
-fileSystem.unlink('./jackpot.txt', (error) =>{
-    error ? console.log(`Error while deleting file ${error}`) : console.log('file was deleted with success');
-});
+// fileSystem.unlink('./jackpot.txt', (error) =>{
+//     error ? console.log(`Error while deleting file ${error}`) : console.log('file was deleted with success');
+// });
+
+const fileSystem = require("fs").promises;
+
+async function getSum()
+{
+    let data = await fileSystem.readFile("./data.json",'utf-8');
+    
+    let dataJSOn = JSON.parse(data);
+
+    dataJSOn.forEach(element => {
+       console.log(element.Salary + 10);
+    });
+
+   console.log(dataJSOn);
+}
+
+getSum();
