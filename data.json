@@ -1,0 +1,12 @@
+[
+    {"name" : "A" , "Salary": 40000},
+    {"name" : "B" , "Salary": 50000},
+    {"name" : "C" , "Salary": 60000},
+    {"name" : "D" , "Salary": 40000},
+    {"name" : "E" , "Salary": 10000},
+    {"name" : "F" , "Salary": 3000},
+    {"name" : "G" , "Salary": 100000},
+    {"name" : "H" , "Salary": 50000},
+    {"name" : "I" , "Salary": 48000},
+    {"name" : "J" , "Salary": 49000}
+]
