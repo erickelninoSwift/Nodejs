@@ -1,6 +1,7 @@
 {
   "name": "nodejs-basic",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -21,5 +22,8 @@
   "homepage": "https://github.com/erickelninoSwift/Nodejs#readme",
   "devDependencies": {
     "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "validator": "^13.9.0"
   }
 }

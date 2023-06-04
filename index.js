@@ -52,19 +52,77 @@ const { copyFileSync } = require("fs");
 //     error ? console.log(`Error while deleting file ${error}`) : console.log('file was deleted with success');
 // });
 
-const fileSystem = require("fs").promises;
+// const fileSystem = require("fs").promises;
 
-async function getSum()
-{
-    let data = await fileSystem.readFile("./data.json",'utf-8');
+// async function getSum()
+// {
+//     let data = await fileSystem.readFile("./data.json",'utf-8');
     
-    let dataJSOn = JSON.parse(data);
+//     let dataJSOn = JSON.parse(data);
 
-    dataJSOn.forEach(element => {
-       console.log(element.Salary + 10);
+//     let sum  = 0;
+
+//     dataJSOn.forEach(element => {
+//        sum += element.Salary;
+//     });
+
+//    console.log(sum);
+// }
+
+// getSum();
+
+
+// HTTP modules
+
+
+const http = require("http");
+const filesystem = require('fs').promises;
+
+
+const url = require('url');
+
+
+
+async function serverRunner()
+{
+
+
+   
+
+    const server = http.createServer(async(request,response) =>{
+   
+        console.log("Server is running now ");
+
+        const myURL = new URL(request.url,'http://localhost:3000/product?id=%27guccibag/');
+
+        console.log(myURL);
+        console.log(myURL.pathname);
+    
+        const data = await filesystem.readFile('./index.html','utf-8',error =>{
+            error ? console.log('There was an error while trying to read file') : console.log("Document loaded with success");
+        })
+    
+        response.writeHead(200,{'Content-type': 'text/html'});
+        response.end(data);
+        
     });
+    
+    return server.listen(3000);
 
-   console.log(dataJSOn);
 }
 
-getSum();
+serverRunner();
+
+import validator from "validator";
+
+var myEmail = 'Erick@yahoo.com';
+
+console.log(validator.isEmail(myEmail))
+
+// URL Modules
+
+
+// NPM modules
+
+
+
