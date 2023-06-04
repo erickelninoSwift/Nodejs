@@ -3,7 +3,7 @@
 // const add = require("./Calculator/add");
 // const sub = require("./Calculator/sub");
 
-const { copyFileSync } = require("fs");
+// const { copyFileSync } = require("fs");
 
 
 
@@ -75,49 +75,52 @@ const { copyFileSync } = require("fs");
 // HTTP modules
 
 
-const http = require("http");
-const filesystem = require('fs').promises;
+// const http = require("http");
+// const filesystem = require('fs').promises;
 
 
-const url = require('url');
+// const url = require('url');
 
 
 
-async function serverRunner()
-{
+// async function serverRunner()
+// {
 
 
    
 
-    const server = http.createServer(async(request,response) =>{
+//     const server = http.createServer(async(request,response) =>{
    
-        console.log("Server is running now ");
+//         console.log("Server is running now ");
 
-        const myURL = new URL(request.url,'http://localhost:3000/product?id=%27guccibag/');
+//         const myURL = new URL(request.url,'http://localhost:3000/product?id=%27guccibag/');
 
-        console.log(myURL);
-        console.log(myURL.pathname);
+//         console.log(myURL);
+//         console.log(myURL.pathname);
     
-        const data = await filesystem.readFile('./index.html','utf-8',error =>{
-            error ? console.log('There was an error while trying to read file') : console.log("Document loaded with success");
-        })
+//         const data = await filesystem.readFile('./index.html','utf-8',error =>{
+//             error ? console.log('There was an error while trying to read file') : console.log("Document loaded with success");
+//         })
     
-        response.writeHead(200,{'Content-type': 'text/html'});
-        response.end(data);
+//         response.writeHead(200,{'Content-type': 'text/html'});
+//         response.end(data);
         
-    });
+//     });
     
-    return server.listen(3000);
+//     return server.listen(3000);
 
-}
+// }
 
-serverRunner();
+// serverRunner();
 
 import validator from "validator";
 
 var myEmail = 'Erick@yahoo.com';
+const name = "Erick";
 
 console.log(validator.isEmail(myEmail))
+
+console.log(validator.equals(name,'Erick'));
 
 // URL Modules
 
